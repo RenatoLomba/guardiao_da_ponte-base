@@ -39,7 +39,7 @@ export default function Home() {
 
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="" />
+      <GitHubCorner projectUrl="https://github.com/RenatoLomba/guardiao_da_ponte-base" />
     </QuizBackground>
   )
 }
