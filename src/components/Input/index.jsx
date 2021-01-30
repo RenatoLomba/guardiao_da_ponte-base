@@ -1,7 +1,12 @@
+/* eslint-disable react/no-typos */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
 /* eslint-disable linebreak-style */
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Input = styled.input`
+const InputBase = styled.input`
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -13,4 +18,17 @@ const Input = styled.input`
   margin-bottom: 25px;
 `;
 
+const Input = ({ ...props }) => (
+  <div>
+    <InputBase {...props} />
+  </div>
+);
+
 export default Input;
+
+Input.PropTypes = {
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string,
+};

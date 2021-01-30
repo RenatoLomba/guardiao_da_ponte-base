@@ -4,25 +4,39 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
         {
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
-            "description": "Essa é pra aquecer",
+            "image": "https://i.pinimg.com/474x/89/8c/f1/898cf1a97741486b2017dbdfae1f4f52.jpg",
+            "title": "Qual classe de D&D 5e recebe seus poderes mágicos através de um pacto com uma entidade sobrenatural?",
+            "description": "Espada e Feitiçaria!",
             "answer": 2,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "Feiticeiro",
+                "Mago",
+                "Bruxo",
+                "Clérigo"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
+            "image": "https://www.denofgeek.com/wp-content/uploads/2011/10/298800-1.jpg?resize=400%2C400",
+            "title": "Em The Elder Scrolls V: Skyrim, qual raça jogável possui a habilidade natural de respirar debaixo d'água?",
+            "description": "Droga! Tomei uma flechada no joelho!",
+            "answer": 1,
+            "alternatives": [
+                "Khajiit",
+                "Argoniano",
+                "Elfo Negro",
+                "Orc"
+            ]
+        },
+        {
+            "image": "https://i.pinimg.com/474x/89/c4/4a/89c44a814ddfc6313e16370fcb58d07a.jpg",
+            "title": "Na série de livros, quadrinhos e jogos de The Witcher, o personagem Geralt é sempre apresentado como Geralt de Rívia, por conta de: ",
+            "description": "Dê um trocado pro seu Bruxo, ó Vale Abundante!",
             "answer": 0,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Ter sido nomeado cavaleiro por Meve de Lyria e Rívia",
+                "Ter nascido e passado sua infância em Rívia",
+                "Ter casado com a filha de um nobre de Rívia",
+                "Ter acordado em Rívia sem lembrar do seu passado"
             ]
         }
     ],
@@ -33,9 +47,9 @@
         "colors": {
             "primary": "#FF4409",
             "secondary": "#ff9100",
-            "mainBg": "#461809",
+            "mainBg": "#210901",
             "contrastText": "#FFFFFF",
-            "wrong": "#FF5722",
+            "wrong": "#FE0303",
             "success": "#4CAF50"
         },
         "borderRadius": "4px"
