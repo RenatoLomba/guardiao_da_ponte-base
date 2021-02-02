@@ -10,14 +10,14 @@
 import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm';
+import db from '../../db.json';
+import Widget from '../../src/components/Widget';
+import GitHubCorner from '../../src/components/GitHubCorner';
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizLogo from '../../src/components/QuizLogo';
+import QuizContainer from '../../src/components/QuizContainer';
+import Button from '../../src/components/Button';
+import AlternativesForm from '../../src/components/AlternativesForm';
 
 const LoadingWidget = () => (
     <Widget>

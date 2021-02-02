@@ -3,6 +3,7 @@
 /* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import Head from 'next/head';
 import db from '../db.json';
@@ -14,6 +15,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
+import Link from '../src/components/Link';
 
 export default function Home() {
   // ROTEAMENTO DO NEXT
@@ -29,7 +31,16 @@ export default function Home() {
       </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget 
+          as={motion.section}
+          transition={{ duration: 0.5 , delay: 0 }}
+          variants={{
+            show: {opacity: 1, y: '0'},
+            hidden: {opacity: 0, y: '-100%'}
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
@@ -53,16 +64,48 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        <Widget>
+        <Widget 
+          as={motion.section}
+          transition={{ duration: 0.5 , delay: 0.5 }}
+          variants={{
+            show: {opacity: 1, x: '0'},
+            hidden: {opacity: 0, x: '100%'}
+          }}
+          initial="hidden"
+          animate="show">
           <Widget.Header>
             <h1>Quizes da Galera</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>lorem ipsum dolor sit amet...</p>
+            <ul>
+              {db.external.map((link, index) => {
+                const [project, author] = 
+                  link.replace('https:', '').replace('.vercel.app/', '').replace(/\//g, '').split('.');
+                return (
+                  <li>
+                    <Widget.Topic 
+                      as={Link}
+                      key={`quiz__${index}`} 
+                      href={`/quiz/${project}___${author}`}
+                    >
+                      {`${project[0].toUpperCase() + project.slice(1)} by ${author[0].toUpperCase() + author.slice(1)}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
 
-        <Footer />
+        <Footer 
+          as={motion.footer}
+          transition={{ duration: 0.5 , delay: 1 }}
+          variants={{
+            show: {opacity: 1, y: '0'},
+            hidden: {opacity: 0, y: '100%'}
+          }}
+          initial="hidden"
+          animate="show"/>
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/RenatoLomba/guardiao_da_ponte-base" />
     </QuizBackground>

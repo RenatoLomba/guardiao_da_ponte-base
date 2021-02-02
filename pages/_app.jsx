@@ -29,6 +29,16 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: ${({ theme }) => theme.colors.secondary}50;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 // CORES THEME QUE PODEM SER ACESSADAS POR TODA A APLICAÇÃO
